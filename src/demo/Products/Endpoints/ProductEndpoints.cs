@@ -76,16 +76,16 @@ public static class ProductEndpoints
             stopwatch.Start();
 
             List<Product> products = new List<Product>();
-            var nameAndDesc = "";
-            foreach (var product in db.Product)
+            var prodCount = db.Product.Count();
+            for (int i = 0; i < prodCount; i++)
             {
-                nameAndDesc = product.Name;
-                if (nameAndDesc.Contains(search, StringComparison.InvariantCultureIgnoreCase))
+                var product = db.Product.ToArray()[i];
+                var prodName = product.Name;
+                if (prodName.Contains(search, StringComparison.InvariantCultureIgnoreCase))
                 {
                     products.Add(product);
                 }
             }
-
             stopwatch.Stop();
 
             var response = new SearchResponse();
