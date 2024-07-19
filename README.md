@@ -1,57 +1,14 @@
-# AI TOUR - eShop Improve Search API
+# Project
 
-## Code samples
+> This repo has been populated by an initial template to help get you started. Please
+> make sure to update the content to build a great experience for community-building.
 
-- Initial code: `.src\00 demo\eShopLite.sln`
-- Final Fixed Search code: `.\src\01 demo Search Fixed\eShopLite.sln`
+As the maintainer of this project, please make a few updates:
 
-## Demo Steps
-
-- Open the solution in `.src\00 demo\eShopLite.sln`
-- Run the solution
-- Make a search
-- Stop
-- In VS2022, ask Copilot to explain the code in the solution.
-
-  - Suggested prompt:
-
-    ```bash
-    show me the endpoints in the solution
-    ```
-
-- GH Copilot should give a general response. Focus this in the current solution using `#solution`
-
-    ```bash
-    show me the endpoints in the #solution
-    ```
-
-- Analyze the GHCopilot response and ask to explain the data class `productDataContext.cs`
-
-    ```bash
-    /explain the code in #productDataContext.cs
-    ```
-
-- (optional) ask how many sample products are added to the local test DB
-
-    ```bash
-    how many sample products are added while initializing the DB?
-    ```
-
-- Back to the SEARCH Endpoint, select the search code between the Stopwatch start/stop and ask copilot to optimize the code using Entity Framework Functions. Suggested prompt:
-
-    ```bash
-    /optimize this code, use EF Functions and like for the search. Also use the search criteria from the parameters
-    ```
-
-- The new code should look like this
-
-    ```csharp
-    List<Product> products = await db.Product
-        .Where(p => EF.Functions.Like(p.Name, $"%{search}%"))
-        .ToListAsync();
-    ```
-
-- Run the search again. In the test video the search process went down from 11 seconds to 0.2 seconds.
+- Improving this README.MD file to provide a great experience
+- Updating SUPPORT.MD with content about this project's support experience
+- Understanding the security reporting process in SECURITY.MD
+- Remove this section from the README
 
 ## Contributing
 
