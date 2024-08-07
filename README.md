@@ -2,6 +2,8 @@
 
 An E-shop platform on .NET 
 
+Looking to file an issue? Please see the [Support](SUPPORT.md) file.
+
 ## Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
